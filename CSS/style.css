@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* NAVBAR */
+
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 11em;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar{
+    background-color: rgb(67, 185, 146);
+}
+.btn{
+    border: none;
+}
+.btn-outline-success{
+    color: #000;
+}
+.btn-search{
+    width: 4rem;
+    border-radius: 10%;
+    border: none;
+}
+.btn-search:hover{
+    background-color:rgb(29, 138, 111);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+.a-blanca{
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    margin:4px
+}
+.a-blanca:hover{
+    color: rgb(80, 75, 75);
+}
+.btn-search:hover{
+    color: #fff;
+}
+
+/* Footer */
+.footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 0;
+    margin-top: 1px;
+}
+
+/* Login */
+form{
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-log{
+    margin: 5px;
+    border: 1px solid red;
+}
+.title-log{
+    font-size: 20px;
+}
+
+.link-password{
+    display: flex;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+.link-password:hover{
+    color: rgb(29, 138, 111);
+}
+
+
+.btn-log{
+    width: 4rem;
+    border: 2px solid rgb(29, 138, 111);
+    border-radius: 5%;
+}
+
+/* seccion home */
+.section-welcome{
+    margin: 5px;
+    border: 1px solid red;
+}
+
+.section-fotos-carousel, .section-usuarios{
+    margin: 5px;
+    border: 1px solid red;
+}
+.img-home{
+    width: 8rem;
+    height: 100%;
+}
+
+
+
+/* Seccion recetas */
+
+.container-recetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 14px;
+}
+.h3-recetas{
+    text-align: center;
+}
+.section-mis-recetas{
+    border: 1px solid red;
+}
+
+
+/* seccion report */
+.section-mis-reportes{
+     border: 1px solid red;
+}
+.btn-add-list, .btn-total-list{
+    width: 8rem;
+    border: 2px solid rgb(29, 138, 111);
+    border-radius: 4%;
+    margin-bottom: 1.5rem;
+}
+.btn-add-list, .btn-total-list:hover{
+    font-weight: bold;
+}
+.container-report{
+    border: 1px solid red;
+    margin-top: 5px;
+}
+.table{
+    cursor: pointer;
+}
+
+
+
+/* ARREGLAR RESPONSIVE, VISTA PARA WEB. COMENCE POR MOBILE FIRST. */
+/* Responsive app-Web */ 
+@media (min-width: 768px){
+      body{
+    width: 50%;
+    /* margin-left: 25%; */
+    align-items: center;
+    justify-content: center;
+    
+    
+ }
+}
