@@ -61,7 +61,7 @@ const agregarComida = (prodId) => {
 }
 
 // Terminar este codigo de eliminar productos para el tp final
-const eliminarComida = (prodId) => {
+const eliminarDeLista = (prodId) => {
     const item = miLista.find((prod) => prod.id === prodId);
     const indice = miLista.indexOf(item);
     miLista.splice(indice, 1);
@@ -81,7 +81,7 @@ const actualizarLista = () => {
         <p>${prod.nombre}</p>
         <p>Cantidad : <span id="cantidad">${prod.cantidad}</span></p>
         <p>Calories : <span id="calories">${prod.calories}</span></p>
-        <button onclick="eliminarDeLista(${prod.id})" class=" btn-primary botonEliminar"><i class="fas fa-trash"></i></button>
+        <button onclick="eliminarDeLista(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
         `
 
         miListaContenedor.appendChild(div);
