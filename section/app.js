@@ -60,7 +60,7 @@ const agregarComida = (prodId) => {
     console.log(item);
 }
 
-// Terminar este codigo de eliminar productos para el tp final
+// Arreglado, ya se puede eliminar cada elemento de manera individual.
 const eliminarDeLista = (prodId) => {
     const item = miLista.find((prod) => prod.id === prodId);
     const indice = miLista.indexOf(item);
