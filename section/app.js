@@ -1,33 +1,44 @@
 
 const contenedor = document.getElementById('contenedor');
+
 let miLista = [];
 
-const botonVaciar = document.getElementById('vaciarLista')
+const botonVaciar = document.getElementById('vaciarLista');
 
-const miListaContenedor = document.getElementById('miListaContenedor')
+const miListaContenedor = document.getElementById('miListaContenedor');
+
+const contadorLista = document.getElementById('contadorComidas');
+
+const caloriasTotales = document.getElementById('caloriasTotales');
+
+document.addEventListener('DOMContentLoaded', () => {
+    if(localStorage.getItem('miLista')){
+        miLista = JSON.parse(localStorage.getItem('miLista'))
+    }
+})
 
 const comidasLista = [
-    {id: 1, nombre: "rice", cantidad: 150, calories:59 },
-    {id: 2, nombre: "chiken", cantidad: 200, calories:110 },
-    {id: 3, nombre: "meat", cantidad: 200, calories:120 },
-    {id: 4, nombre: "fish", cantidad: 200, calories:100 },
-    {id: 5, nombre: "turkey", cantidad: 150, calories:98 },
-    {id: 6, nombre: "steak", cantidad: 150, calories:100 },
-    {id: 7, nombre: "bacon", cantidad: 120, calories:120 },
-    {id: 8, nombre: "potato", cantidad: 200, calories:60 },
-    {id: 9, nombre: "spaghetti", cantidad: 200, calories:180 },
-    {id: 10, nombre: "lasagna", cantidad: 200, calories:140 },
-    {id: 11, nombre: "avena", cantidad: 100, calories:300 },
-    {id: 12, nombre: "cereal", cantidad: 100, calories:100 },
-    {id: 13, nombre: "peanut", cantidad: 100, calories:50 },
-    {id: 14, nombre: "almond", cantidad: 100, calories:90 },
-    {id: 15, nombre: "cereal", cantidad: 100, calories:90 },
-    {id: 16, nombre: "almond", cantidad: 100, calories:120 },
-    {id: 17, nombre: "chese white", cantidad: 150, calories:150 },
-    {id: 18, nombre: "tomatoes", cantidad: 100, calories:20 },
-    {id: 19, nombre: "lettuce", cantidad: 100, calories:20 },
-    {id: 20, nombre: "mixt salad", cantidad: 200, calories:80 },
-    {id: 21, nombre: "spinach", cantidad: 100, calories:60 },
+    {id: 1, nombre: "Arroz", cantidad: 150, calorias:59 },
+    {id: 2, nombre: "Pollo", cantidad: 200, calorias:110 },
+    {id: 3, nombre: "Carne", cantidad: 200, calorias:120 },
+    {id: 4, nombre: "Pescado", cantidad: 200, calorias:100 },
+    {id: 5, nombre: "Pavo", cantidad: 150, calorias:98 },
+    {id: 6, nombre: "Cerdo", cantidad: 150, calorias:100 },
+    {id: 7, nombre: "Bacon", cantidad: 120, calorias:120 },
+    {id: 8, nombre: "Papa", cantidad: 200, calorias:60 },
+    {id: 9, nombre: "Spaghetti", cantidad: 200, calorias:180 },
+    {id: 10, nombre: "Lasagna", cantidad: 200, calorias:140 },
+    {id: 11, nombre: "Avena", cantidad: 100, calorias:300 },
+    {id: 12, nombre: "Cereal", cantidad: 100, calorias:100 },
+    {id: 13, nombre: "Maní", cantidad: 100, calorias:50 },
+    {id: 14, nombre: "Almendras", cantidad: 100, calorias:90 },
+    {id: 15, nombre: "Pasas de uva", cantidad: 100, calorias:90 },
+    {id: 16, nombre: "Nueces", cantidad: 100, calorias:120 },
+    {id: 17, nombre: "Queso blanco", cantidad: 150, calorias:150 },
+    {id: 18, nombre: "Tomates", cantidad: 100, calorias:20 },
+    {id: 19, nombre: "Lechuga", cantidad: 100, calorias:20 },
+    {id: 20, nombre: "Ensalada mixta", cantidad: 200, calorias:80 },
+    {id: 21, nombre: "Espinaca", cantidad: 100, calorias:60 },
     
     ];
 // vaciar Lista de comidas agregadas
@@ -40,8 +51,8 @@ botonVaciar.addEventListener('click', () => {
     div.classList.add('producto');
     div.innerHTML = `
     <h3>${producto.nombre}</h3>
-    <p>${producto.cantidad}</p>
-    <p>${producto.calories}</p>
+    <p>Cantidad : <span id="cantidad">${producto.cantidad}gr</p>
+    <p>Calorias : <span id="calorias">${producto.calorias}cal</p>
     <button id= "agregar${producto.id}" class="boton-agregar btn btn-primary">Agregar <i class="fa-solid fa-plus"></i> </button>
     `
     contenedor.appendChild(div);
@@ -54,6 +65,7 @@ botonVaciar.addEventListener('click', () => {
  })
 
 const agregarComida = (prodId) => {
+    
     const item = comidasLista.find((prod) => prod.id === prodId);
     miLista.push(item);
     actualizarLista();
@@ -79,11 +91,15 @@ const actualizarLista = () => {
         div.classList = ('productoEnLista');
         div.innerHTML = `
         <p>${prod.nombre}</p>
-        <p>Cantidad : <span id="cantidad">${prod.cantidad}</span></p>
-        <p>Calories : <span id="calories">${prod.calories}</span></p>
-        <button onclick="eliminarDeLista(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        <p>Cantidad : <span id="cantidad">${prod.cantidad}gr</span></p>
+        <p>Calorias : <span id="calorias">${prod.calorias}cal</span></p>
+        <button onclick="eliminarDeLista(${prod.id})" class="botonEliminar"><i class="fas fa-trash-alt"></i></button>
         `
 
         miListaContenedor.appendChild(div);
+
+        localStorage.setItem('miLista', JSON.stringify(miLista))
     })
+    contadorLista.innerText = miLista.length // para actualizar cantidad de la lista
+    caloriasTotales.innerText = miLista.reduce((acc, prod)   => acc + prod.cantidad, 0)
 }
