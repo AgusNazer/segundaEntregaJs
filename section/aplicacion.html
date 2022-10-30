@@ -41,16 +41,17 @@
                 
                 </ul>
                 <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search... And dont forget drink water" aria-label="Search">
-                <button class="btn-search btn-outline-success btn-search" type="submit">Search</button>
+                <input id="buscador" class="form-control me-2" type="search" placeholder="Search... And dont forget drink water" aria-label="Search">
+                <button id="btnBuscar" class="btn-search btn-outline-success btn-search" type="submit">Search</button>
                 </form>
             </div>
             </div>
         </nav>
     <h2>Añade tu comida!</h2>
+    <li class="resultado-busqueda" id="resultadoBusqueda" ></li>
 
     <button class="btn btn-warning btnListaCheck" id="botonLista"><i class="fa-solid fa-list-check "></i><span id="contadorComidas"> Ver tu lista </span></button>
-
+   
     <div id="listaComidas"></div>
 
 
@@ -99,9 +100,10 @@
                     
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
                 <!-- <script src="../main.js" ></script> -->
-                <script src="../section/report.js" ></script>
+                
                 <script src="../section/app.js" ></script>
                 <script src="../modalLista.js" ></script>
+                <script src="../buscador.js" ></script>
                 
 
                 </body>

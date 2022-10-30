@@ -18,27 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const comidasLista = [
-    {id: 1, nombre: "Arroz", cantidad: 150, calorias:59 },
-    {id: 2, nombre: "Pollo", cantidad: 200, calorias:110 },
-    {id: 3, nombre: "Carne", cantidad: 200, calorias:120 },
-    {id: 4, nombre: "Pescado", cantidad: 200, calorias:100 },
-    {id: 5, nombre: "Pavo", cantidad: 150, calorias:98 },
-    {id: 6, nombre: "Cerdo", cantidad: 150, calorias:100 },
-    {id: 7, nombre: "Bacon", cantidad: 120, calorias:120 },
-    {id: 8, nombre: "Papa", cantidad: 200, calorias:60 },
-    {id: 9, nombre: "Spaghetti", cantidad: 200, calorias:180 },
-    {id: 10, nombre: "Lasagna", cantidad: 200, calorias:140 },
-    {id: 11, nombre: "Avena", cantidad: 100, calorias:300 },
-    {id: 12, nombre: "Cereal", cantidad: 100, calorias:100 },
-    {id: 13, nombre: "Maní", cantidad: 100, calorias:50 },
-    {id: 14, nombre: "Almendras", cantidad: 100, calorias:90 },
-    {id: 15, nombre: "Pasas de uva", cantidad: 100, calorias:90 },
-    {id: 16, nombre: "Nueces", cantidad: 100, calorias:120 },
-    {id: 17, nombre: "Queso blanco", cantidad: 150, calorias:150 },
-    {id: 18, nombre: "Tomates", cantidad: 100, calorias:20 },
-    {id: 19, nombre: "Lechuga", cantidad: 100, calorias:20 },
-    {id: 20, nombre: "Ensalada mixta", cantidad: 200, calorias:80 },
-    {id: 21, nombre: "Espinaca", cantidad: 100, calorias:60 },
+    {id: 1, nombre: "🍚Arroz", cantidad: 150, calorias:59 },
+    {id: 2, nombre: "🍗Pollo", cantidad: 200, calorias:110 },
+    {id: 3, nombre: "🥩Carne", cantidad: 200, calorias:120 },
+    {id: 4, nombre: "🐟Pescado", cantidad: 200, calorias:100 },
+    {id: 5, nombre: "🦃Pavo", cantidad: 150, calorias:98 },
+    {id: 6, nombre: "🥓Cerdo", cantidad: 150, calorias:100 },
+    {id: 7, nombre: "🥓Bacon", cantidad: 120, calorias:120 },
+    {id: 8, nombre: "🥔Papa", cantidad: 200, calorias:60 },
+    {id: 9, nombre: "🍝Spaghetti", cantidad: 200, calorias:180 },
+    {id: 10, nombre: "🍝Lasagna", cantidad: 200, calorias:140 },
+    {id: 11, nombre: "🥣Avena", cantidad: 100, calorias:300 },
+    {id: 12, nombre: "🥣Cereal", cantidad: 100, calorias:100 },
+    {id: 13, nombre: "🥜Maní", cantidad: 100, calorias:50 },
+    {id: 14, nombre: "🥨Almendras", cantidad: 100, calorias:90 },
+    {id: 15, nombre: "🍇Pasas de uva", cantidad: 100, calorias:90 },
+    {id: 16, nombre: "🥜Nueces", cantidad: 100, calorias:120 },
+    {id: 17, nombre: "🧀Queso blanco", cantidad: 150, calorias:150 },
+    {id: 18, nombre: "🍅Tomates", cantidad: 100, calorias:20 },
+    {id: 19, nombre: "🥬Lechuga", cantidad: 100, calorias:20 },
+    {id: 20, nombre: "🥗Ensalada mixta", cantidad: 200, calorias:80 },
+    {id: 21, nombre: "🌾Espinaca", cantidad: 100, calorias:60 },
     
     ];
 // vaciar Lista de comidas agregadas
@@ -101,5 +101,8 @@ const actualizarLista = () => {
         localStorage.setItem('miLista', JSON.stringify(miLista))
     })
     contadorLista.innerText = miLista.length // para actualizar cantidad de la lista
-    caloriasTotales.innerText = miLista.reduce((acc, prod)   => acc + prod.cantidad, 0)
+    caloriasTotales.innerText = miLista.reduce((acc, prod)   => acc + prod.calorias, 0)
 }
+
+
+
