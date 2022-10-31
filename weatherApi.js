@@ -83,23 +83,3 @@ window.addEventListener('load', () => {
     }
 })
 
-/* const div = document.getElementById('contenedorClima')
-const divClima = document.createElement('div');
-
-divClima.innerHTML = `
-
-    <div id="caja1">
-        <h1 id="tempValor"></h1>
-        <h1 id="tempDescripcion"></h1>
-    </div>
-    <div id="caja2">
-        <h1 id="ubicacion"></h1>
-        <h1 id="iconoAnimado"></h1>
-    </div>
-    <div id="caja3">
-        <h3>Veloc. viento</h3>
-        <h1 id="vientoVelocidad"></h1>
-    </div>
-</div>
-`
-contenedorClima.appendChild(divClima); */

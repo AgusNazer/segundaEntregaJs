@@ -13,19 +13,25 @@ const filtrar = (e) => {
         let nombre = producto.nombre.toLowerCase();
        
         if(nombre.indexOf(texto) !== -1){
-        resultadoBusqueda.innerHTML = `
-        <li>Comida: ${producto.nombre} <br> Calorias: ${producto.calorias} cal</li>
-        `
+            resultadoBusqueda.innerHTML = `
+            <div class=" comida-encontrada">
+            <li><h3>Comida: ${producto.nombre} <br> Calorias: ${producto.calorias} cal</h3></li>
+            </div>`
         }
     }
     if(resultadoBusqueda.innerHTML === ""){
-    resultadoBusqueda.innerHTML += `
-     <h3 class="h3-prod-no-encontrado">Producto no encontrado</h3>
+    resultadoBusqueda.innerHTML = `
+        <div class="comida-no-encontrada" >
+        <h3 class="h3-prod-no-encontrado">Comida no encontrada</h3>
+        </div>
     `
     }
+
+    
 }
 btnBuscar.addEventListener('click', filtrar);
 inputBuscar.addEventListener('keyup', filtrar);
 
-filtrar();
+
+/* filtrar(); */
 

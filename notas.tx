@@ -374,3 +374,5 @@ swal alert
 /* btnALert.addEventListener("click", () => {
   Swal.fire ('Se ha rgistrado correctamente')
 })  */
+
+

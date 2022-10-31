@@ -35,7 +35,8 @@ form.addEventListener("submit", e => {
    if(entrar){
     parrafo.innerHTML = warnings
    }else{
-    parrafo.innerHTML  = "Ingreso correcto"
+    Swal.fire ('Se ha rgistrado correctamente')
+     parrafo.innerHTML  = "Ingreso correcto" 
    }
    
    // LOCALSTORAGE
@@ -52,7 +53,8 @@ form.addEventListener("submit", e => {
 /*  console.log(nombreLocal);
   console.log(emailLocal); */
  })
- 
+ /* btnALert.addEventListener("click", () => {
+  Swal.fire ('Se ha rgistrado correctamente') */
 
 
 

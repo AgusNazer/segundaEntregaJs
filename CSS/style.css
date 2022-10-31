@@ -5,17 +5,26 @@
 }
 /* NAVBAR */
 
+
+
 body{
-    background-color: rgb(19, 217, 224);
+    
+    background-image: linear-gradient(80deg, rgb(19, 224, 129),rgb(19, 217, 224) );
     position: relative;
     min-height: 100vh;
     padding-bottom: 11em;
+    
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.body-index{
+    background-image: linear-gradient(80deg, rgb(19, 217, 224), rgb(19, 224, 129) ); 
+}
+
 .navbar{
-    background-color: rgb(19, 224, 129);
+   
+    background-image: linear-gradient(80deg, rgb(19, 224, 129),rgb(19, 217, 224) );
 }
 .btn{
     border: none;
@@ -154,6 +163,15 @@ input{
 /* .filtro{
     display: none;
 } */
+
+.comida-encontrada{
+    background-color: rgb(19, 224, 129);
+    background-image: linear-gradient(80deg, rgb(19, 224, 129),rgb(19, 217, 224) );
+}
+.comida-no-encontrada{
+    background-color: rgb(212, 173, 44);
+    background-image: linear-gradient(80deg, red, rgb(19, 217, 224) )
+}
 .resultado-busqueda{
     list-style: none;
     
@@ -161,7 +179,7 @@ input{
     font-size: 20px;
 }
 .h3-prod-no-encontrado{
-    color: rgb(148, 22, 22);
+    color: rgb(219, 209, 209);
     font-family:'Roboto', sans-serif;
 }
 

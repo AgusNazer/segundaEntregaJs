@@ -50,6 +50,7 @@ botonVaciar.addEventListener('click', () => {
     const div = document.createElement('div');
     div.classList.add('producto');
     div.innerHTML = `
+    <br>
     <h3>${producto.nombre}</h3>
     <p>Cantidad : <span id="cantidad">${producto.cantidad}gr</p>
     <p>Calorias : <span id="calorias">${producto.calorias}cal</p>
@@ -72,7 +73,7 @@ const agregarComida = (prodId) => {
     console.log(item);
 }
 
-// Arreglado, ya se puede eliminar cada elemento de manera individual.
+
 const eliminarDeLista = (prodId) => {
     const item = miLista.find((prod) => prod.id === prodId);
     const indice = miLista.indexOf(item);
