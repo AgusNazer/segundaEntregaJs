@@ -1,14 +1,9 @@
 
 const contenedor = document.getElementById('contenedor');
-
 let miLista = [];
-
 const botonVaciar = document.getElementById('vaciarLista');
-
 const miListaContenedor = document.getElementById('miListaContenedor');
-
 const contadorLista = document.getElementById('contadorComidas');
-
 const caloriasTotales = document.getElementById('caloriasTotales');
 
 document.addEventListener('DOMContentLoaded', () => {

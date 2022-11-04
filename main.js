@@ -2,16 +2,26 @@
 // LOGIN
 
 
-const nombreRegistro = document.getElementById('name')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
-const form = document.getElementById('form')
-const parrafo = document.getElementById('warnings')
+const nombreRegistro = document.getElementById('name');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const form = document.getElementById('form');
+const parrafo = document.getElementById('warnings');
+
+// ocultar y mostrar secciones "app" y "recipes" mediantes las siguientes funciones
+function ocultarSecciones(){
+  document.getElementById('esconderApp').style.display = 'none';
+  document.getElementById('esconderRecipes').style.display = 'none';
+}
+ocultarSecciones()
 
 
+function mostrarSecciones(){
+  document.getElementById('esconderApp').style.display = 'block';
+  document.getElementById('esconderRecipes').style.display = 'block';
+}
 
 
-// para guardar en el localStorage clickear dos veces el boton de "agregar" (arreglarlo para el tp final)
 form.addEventListener("submit", e => {
   e.preventDefault();
   let warnings = ""
@@ -36,11 +46,17 @@ form.addEventListener("submit", e => {
    if(entrar){
     parrafo.innerHTML = warnings
    }else{
-    Swal.fire ('Se ha rgistrado correctamente!!!')
+    Swal.fire ('Se ha rgistrado correctamente, seccion APP y Recipes habilitadas.')
      parrafo.innerHTML  = "Ingreso correcto" 
+     mostrarSecciones()
    }
    
  
+
+
+
+
+
    
    //  arreglar el LOCALSTORAGE
  /*   const guardarRegistro = document.getElementById('btnRegistro');
@@ -49,13 +65,14 @@ form.addEventListener("submit", e => {
  guardarRegistro.addEventListener("click", (e) => {
   e.preventDefault();
   let contador = 0 ;
+  */
   let nombreLocal = JSON.stringify(localStorage.setItem("usuario", nombreRegistro.value));
   let emailLocal = JSON.stringify(localStorage.setItem("email", email.value));
-} ) */
+} ) 
 
  /* console.log(nombreLocal);
   console.log(emailLocal); */
- })
+ 
  
 
 
