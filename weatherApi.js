@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
                 //console.log(data)
                  
                 let temp = Math.round(data.main.temp -270)
-                  tempValor.textContent = `${temp}° C `
+                  tempValor.textContent = `${temp - 4}° C `
 
                   let desc = data.weather[0].description
                   tempDescripcion.textContent = desc.toUpperCase()
@@ -38,39 +38,39 @@ window.addEventListener('load', () => {
                   vientoVel.textContent = `${data.wind.speed} k/h`
                 
                   //iconos dinámicos
-        console.log(data.weather[0].main)
+        //console.log(data.weather[0].main)
         switch (data.weather[0].main) {
             case 'Thunderstorm':
               iconoAnimado.src='animated/thunder.svg'
-              console.log('TORMENTA');
+              //console.log('TORMENTA');
               break;
             case 'Drizzle':
               iconoAnimado.src='animated/rainy-2.svg'
-              console.log('LLOVIZNA');
+              //console.log('LLOVIZNA');
               break;
             case 'Rain':
               iconoAnimado.src='animated/rainy-7.svg'
-              console.log('LLUVIA');
+              //console.log('LLUVIA');
               break;
             case 'Snow':
               iconoAnimado.src='animated/snowy-6.svg'
-                console.log('NIEVE');
+                //console.log('NIEVE');
               break;                        
             case 'Clear':
                 iconoAnimado.src='animated/day.svg'
-                console.log('LIMPIO');
+                //console.log('LIMPIO');
               break;
             case 'Atmosphere':
               iconoAnimado.src='animated/weather.svg'
-                console.log('ATMOSFERA');
+                //console.log('ATMOSFERA');
                 break;  
             case 'Clouds':
                 iconoAnimado.src='animated/cloudy-day-1.svg'
-                console.log('NUBES');
+                //console.log('NUBES');
                 break;  
             default:
               iconoAnimado.src='animated/cloudy-day-1.svg'
-              console.log('por defecto');
+              //console.log('por defecto');
           }
 
                 
