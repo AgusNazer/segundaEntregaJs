@@ -334,11 +334,11 @@ i{
    outline: none;
    font-size: 1.4rem;
 }
-.boton-buscar-receta{
+/* .boton-buscar-receta{
     width: 8%;
     font-size: 1.4rem;
     margin: -2rem;
-}
+} */
 
 .item{
     margin: auto;

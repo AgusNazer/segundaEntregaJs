@@ -1,3 +1,5 @@
+
+// modales de la seccion app donde se agregan las comidas.
 const contenedorModal = document.getElementsByClassName('modalContenedor')[0]
 const botonAbrir = document.getElementById('botonLista')
 const botonCerrar = document.getElementById('listaCerrar')

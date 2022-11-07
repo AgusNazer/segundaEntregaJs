@@ -6,7 +6,7 @@ let inputValue = "";
 buscarReceta.addEventListener('submit', (e) =>{
 	e.preventDefault();
 	inputValue = e.target.querySelector('input').value;
-	console.log(inputValue)
+	
 	getAPI();
 });
 
