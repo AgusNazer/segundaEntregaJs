@@ -45,7 +45,7 @@ form.addEventListener("submit", e => {
    if(entrar){
     parrafo.innerHTML = warnings
    }else{
-    Swal.fire ('You has been register successfully, seccion APP & Recipes enabled.')
+    Swal.fire ('You has been register successfully, section APP & Recipes enabled.')
      parrafo.innerHTML  = "login successfull" 
      mostrarSecciones()
    }
