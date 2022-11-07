@@ -16,6 +16,5 @@ contenedorModal.addEventListener('click', (event) =>{
 
 })
 modalLista.addEventListener('click', (event) => {
-    event.stopPropagation() //cuando clickeo sobre el modal se finaliza la propagacion del click a los elementos
-    //padre
+    event.stopPropagation() 
 })

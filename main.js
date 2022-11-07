@@ -1,7 +1,6 @@
 
-// LOGIN
-
-
+// LOGIN: al logearse correctamente se habilitan las secciones "app" y "recipes", las cuales estaran 
+// visibles en el menu hamburguesa desplegable
 const nombreRegistro = document.getElementById('name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -46,52 +45,29 @@ form.addEventListener("submit", e => {
    if(entrar){
     parrafo.innerHTML = warnings
    }else{
-    Swal.fire ('Se ha rgistrado correctamente, seccion APP y Recipes habilitadas.')
+    Swal.fire ('Se ha registrado correctamente, seccion APP y Recipes habilitadas.')
      parrafo.innerHTML  = "Ingreso correcto" 
      mostrarSecciones()
    }
    
  
-
-
-
-
-
-   
-   //  arreglar el LOCALSTORAGE
- /*   const guardarRegistro = document.getElementById('btnRegistro');
-
-
- guardarRegistro.addEventListener("click", (e) => {
-  e.preventDefault();
-  let contador = 0 ;
-  */
   let nombreLocal = JSON.stringify(localStorage.setItem("usuario", nombreRegistro.value));
   let emailLocal = JSON.stringify(localStorage.setItem("email", email.value));
 } ) 
 
- /* console.log(nombreLocal);
-  console.log(emailLocal); */
- 
- 
 
-
-
-
-
-
-/*  seccion Comentarios */
+ /*  seccion Comentarios */
 
 const getComments = async () => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/comments`);
   const comments = await response.json();
-  /* console.log(comments); */
+  
 
   let mostrarDatos =  ``;
  
   comments.splice(20)// la reduje a 20 porque traia 500 comentarios y solo es a modo practico
   comments.forEach((comment, index) => {
-      /* console.log(comment) */
+      
       mostrarDatos += 
       `
       <tr class="table-primary">

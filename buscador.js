@@ -5,8 +5,7 @@ const resultadoBusqueda = document.getElementById("resultadoBusqueda");
 
 //buscar y filtrar por nombre de comida
 const filtrar = () => {
-    /* e.preventDefault() */
-    /* console.log(inputBuscar.value); */
+    
     resultadoBusqueda.innerHTML = "";
 
     const texto = inputBuscar.value.toLowerCase();
