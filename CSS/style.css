@@ -325,26 +325,40 @@ i{
     margin: 1rem auto;
     
 }
-.input-receta{
-    width: 90%;
-   
-   padding: 6px;
-   border-radius: 4px;
-   border: none;
-   outline: none;
-   font-size: 1.4rem;
+.contenedor-buscador-receta{
+    display: flex;
 }
-/* .boton-buscar-receta{
-    width: 8%;
+
+.input-receta{
+    margin-left: 1rem;
+    width: 90%;
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
     font-size: 1.4rem;
-    margin: -2rem;
-} */
+}
+.btn-recetas{
+    width: 10rem;
+    font-size: 1.4rem;
+    margin-left: 7rem;
+    margin-top: 5px;
+    
+} 
+.lupa{
+    margin-left: -2rem;
+    margin-top: 5px;
+    vertical-align:middle;
+}
 
 .item{
     margin: auto;
     
 }
 
+.btn-ver-receta{
+    margin-bottom: 8px;
+}
 
 
 

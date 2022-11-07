@@ -1,7 +1,6 @@
 
 const buscarReceta = document.querySelector('#formSearch');
 
-
 let inputValue = "";
 buscarReceta.addEventListener('submit', (e) =>{
 	e.preventDefault();
@@ -9,8 +8,6 @@ buscarReceta.addEventListener('submit', (e) =>{
 	
 	getAPI();
 });
-
-
 
 async function getAPI () {
     id = 'c8c9ed35';
@@ -34,19 +31,18 @@ function generarHTML(results){
                 <img class="img-receta img-fluid" src="${result.recipe.image}" alt="">
                 <div class="">
                     <h2 class="titulo">${result.recipe.label}</h2>
-                    <a class="btn btn-success align-items-center" href="${result.recipe.url}" target="_blank">View recipe</a>
+                    <a class="btn btn-success align-items-center btn-ver-receta" href="${result.recipe.url}" target="_blank">View recipe</a>
                 </div>
-                <p class="data-item">Calories: ${result.recipe.calories}</p>
+				<p class="data-item">Meal type: ${result.recipe.mealType}</p>
+                <p class="data-item">Calories: ${result.recipe.calories.toFixed(0)}</p>
            </div>
           </div>
         </div>
         `
 		
+		
 		document.querySelector('#mostrarDesdeJS').innerHTML = mostrarHTML;
 	})
 }
-
-
-
 
 

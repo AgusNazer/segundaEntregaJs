@@ -39,22 +39,25 @@
             </ul>
             <form class="d-flex" role="search">
               
-              <!-- <button id="btnBuscar" class="btn-search btn-outline-success">Search</button> -->
+              
             </form>
           </div>
         </div>
       </nav>
       
  <!-- App buscar tu receta -->
+    
      <h2 class="logo">Your recipes!!</h2>
         <p class="logo2">Are you looking for recipes? search it here!</p>
           <form class="form-receta" id="formSearch">
-            <input class="input-receta" type="text" placeholder="'rice', 'chicken', 'pizza', & much more">
-            <!-- <i id="boton-buscar-receta"  class="fas fa-search boton-buscar-receta" ></i> -->
+             <div class="contenedor-buscador-recetas">
+                <input class="input-receta" type="text" placeholder="'rice', 'chicken', 'pizza', etc">
+                <input  type="submit" value="Search" class="btn btn-primary btn-recetas" placeholder="Buscar">
+                <i type="submit" class="fas fa-search boton-buscar-receta lupa" ></i> 
+            </div>
           </form>
-       
-
-          <section class="mostrar-desde-js" id="mostrarDesdeJS">
+    
+       <section class="mostrar-desde-js" id="mostrarDesdeJS">
           
             <!-- Lo traigo dinamicamente desde JS -->
      <!-- <div class="item">
