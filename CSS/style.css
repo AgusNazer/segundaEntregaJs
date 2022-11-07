@@ -325,12 +325,12 @@ i{
     margin: 1rem auto;
     
 }
-.contenedor-buscador-receta{
+.contenedor-buscador-recetas{
     display: flex;
+    
 }
 
 .input-receta{
-    margin-left: 1rem;
     width: 90%;
     padding: 6px;
     border-radius: 4px;
@@ -341,8 +341,7 @@ i{
 .btn-recetas{
     width: 10rem;
     font-size: 1.4rem;
-    margin-left: 7rem;
-    margin-top: 5px;
+    
     
 } 
 

@@ -25,7 +25,7 @@ function generarHTML(results){
 	results.map(result => {
 		mostrarHTML += 
 		`
-		 <div class="item col-4 my-4 text-center align-items-center">
+		 <div class="item col-5 my-5 text-center align-items-center">
 		  <div class= "card">
 			<div class= "card-body cards">
                 <img class="img-receta img-fluid" src="${result.recipe.image}" alt="">
