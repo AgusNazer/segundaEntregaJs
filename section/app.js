@@ -47,9 +47,9 @@ botonVaciar.addEventListener('click', () => {
     div.innerHTML = `
     <br>
     <h3>${producto.nombre}</h3>
-    <p>Cantidad : <span id="cantidad">${producto.cantidad}gr</p>
-    <p>Calories : <span id="calories">${producto.calories}cal</p>
-    <button id= "agregar${producto.id}" class="boton-agregar btn btn-primary">Agregar <i class="fa-solid fa-plus"></i> </button>
+    <p>Quantity : <span id="Quantity">${producto.cantidad}gr</p>
+    <p>Calories : <span id="Calories">${producto.calories}cal</p>
+    <button id= "agregar${producto.id}" class="boton-agregar btn btn-primary">Add <i class="fa-solid fa-plus"></i> </button>
     `
     contenedor.appendChild(div);
 
@@ -87,8 +87,8 @@ const actualizarLista = () => {
         div.classList = ('productoEnLista');
         div.innerHTML = `
         <p>${prod.nombre}</p>
-        <p>Cantidad : <span id="cantidad">${prod.cantidad}gr</span></p>
-        <p>Calories : <span id="calories">${prod.calories}cal</span></p>
+        <p>Quantity : <span id="Quantity">${prod.cantidad}gr</span></p>
+        <p>Calories : <span id="Calories">${prod.calories}cal</span></p>
         <button onclick="eliminarDeLista(${prod.id})" class="botonEliminar"><i class="fas fa-trash-alt"></i></button>
         `
 

@@ -28,25 +28,25 @@ form.addEventListener("submit", e => {
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
   parrafo.innerHTML = ""
   if (nombreRegistro.value.length < 6) {
-        warnings += `El nombre es incorrecto <br>`
+        warnings += `Invalid name <br>`
         entrar = true
     
   }
   
    if(!regexEmail.test(email.value)){
-     warnings += `El email no es valido <br>`
+     warnings += `Invalid email <br>`
      entrar = true ;
    }
    if(password.value.length < 8){
-    warnings += `La contraseña debe tener al menos 8 caracteres <br>`
-    Swal.fire('ingrese una contraseña valida')
+    warnings += `The password must contatin at least 8 characters<br>`
+    Swal.fire('enter a valid password')
     entrar = true
    }
    if(entrar){
     parrafo.innerHTML = warnings
    }else{
-    Swal.fire ('Se ha registrado correctamente, seccion APP y Recipes habilitadas.')
-     parrafo.innerHTML  = "Ingreso correcto" 
+    Swal.fire ('You has been register successfully, seccion APP & Recipes enabled.')
+     parrafo.innerHTML  = "login successfull" 
      mostrarSecciones()
    }
    
