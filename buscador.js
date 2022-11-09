@@ -1,5 +1,5 @@
-const inputBuscar = document.querySelector("#buscador");
-const btnBuscar = document.querySelector("#btnBuscar");
+const inputBuscar = document.getElementById("buscador");
+
 const resultadoBusqueda = document.getElementById("resultadoBusqueda");
 
 
@@ -31,9 +31,12 @@ const filtrar = () => {
 
     
 }
-btnBuscar.addEventListener('click', filtrar);
+
+
 inputBuscar.addEventListener('keyup', filtrar);
+ filtrar(); 
 
 
-filtrar();
 
+
+ 
